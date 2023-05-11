@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		89A18B912A0D050F009B28A4 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18B902A0D050F009B28A4 /* NotesViewModel.swift */; };
+		89A18B942A0D08AD009B28A4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18B932A0D08AD009B28A4 /* APIService.swift */; };
+		89A18B962A0D08EC009B28A4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18B952A0D08EC009B28A4 /* APIClient.swift */; };
+		89A18B982A0D0C12009B28A4 /* APIPreviewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18B972A0D0C12009B28A4 /* APIPreviewClient.swift */; };
+		89A18B9A2A0D0C63009B28A4 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89A18B992A0D0C63009B28A4 /* notes.json */; };
 		EF1BBD6928B79D5C00EC653C /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1BBD6828B79D5C00EC653C /* NotesApp.swift */; };
 		EF1BBD6B28B79D5C00EC653C /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1BBD6A28B79D5C00EC653C /* NotesView.swift */; };
 		EF1BBD6D28B79D5D00EC653C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1BBD6C28B79D5D00EC653C /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		89A18B902A0D050F009B28A4 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		89A18B932A0D08AD009B28A4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		89A18B952A0D08EC009B28A4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		89A18B972A0D0C12009B28A4 /* APIPreviewClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPreviewClient.swift; sourceTree = "<group>"; };
+		89A18B992A0D0C63009B28A4 /* notes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = notes.json; sourceTree = "<group>"; };
 		EF1BBD6528B79D5C00EC653C /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1BBD6828B79D5C00EC653C /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		EF1BBD6A28B79D5C00EC653C /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -46,6 +54,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		89A18B922A0D089F009B28A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				89A18B932A0D08AD009B28A4 /* APIService.swift */,
+				89A18B952A0D08EC009B28A4 /* APIClient.swift */,
+				89A18B972A0D0C12009B28A4 /* APIPreviewClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		EF1BBD5C28B79D5C00EC653C = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +83,9 @@
 		EF1BBD6728B79D5C00EC653C /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				89A18B922A0D089F009B28A4 /* Networking */,
 				EF1BBD7628B79D7600EC653C /* App */,
+				89A18B8F2A0D04F9009B28A4 /* ViewModel */,
 				EF1BBD7828B79D8900EC653C /* Views */,
 				EF1BBD7928B79DBE00EC653C /* Models */,
 				EF1BBD7728B79D7D00EC653C /* Resources */,
@@ -78,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1BBD6F28B79D5D00EC653C /* Preview Assets.xcassets */,
+				89A18B992A0D0C63009B28A4 /* notes.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -101,7 +122,6 @@
 		EF1BBD7828B79D8900EC653C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				89A18B8F2A0D04F9009B28A4 /* ViewModel */,
 				EF1BBD6A28B79D5C00EC653C /* NotesView.swift */,
 				EF1BBD7C28B79EF000EC653C /* NoteView.swift */,
 			);
@@ -176,6 +196,7 @@
 			files = (
 				EF1BBD7028B79D5D00EC653C /* Preview Assets.xcassets in Resources */,
 				EF1BBD6D28B79D5D00EC653C /* Assets.xcassets in Resources */,
+				89A18B9A2A0D0C63009B28A4 /* notes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1BBD6B28B79D5C00EC653C /* NotesView.swift in Sources */,
+				89A18B962A0D08EC009B28A4 /* APIClient.swift in Sources */,
 				89A18B912A0D050F009B28A4 /* NotesViewModel.swift in Sources */,
 				EF1BBD6928B79D5C00EC653C /* NotesApp.swift in Sources */,
+				89A18B982A0D0C12009B28A4 /* APIPreviewClient.swift in Sources */,
 				EF1BBD7D28B79EF000EC653C /* NoteView.swift in Sources */,
+				89A18B942A0D08AD009B28A4 /* APIService.swift in Sources */,
 				EF1BBD7B28B79DCC00EC653C /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

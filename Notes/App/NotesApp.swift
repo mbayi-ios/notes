@@ -4,7 +4,7 @@ import SwiftUI
 struct NotesApp: App {
     var body: some Scene {
         WindowGroup {
-            NotesView()
+            NotesView(viewModel: .init(apiService: APIClient()))
         }
     }
 }

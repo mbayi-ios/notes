@@ -2,7 +2,7 @@ import SwiftUI
 
 struct NotesView: View {
 
-    @ObservedObject var viewModel = NotesViewModel()
+    @ObservedObject var viewModel: NotesViewModel
 
     // MARK: - View
 
@@ -13,12 +13,8 @@ struct NotesView: View {
             }
             .navigationTitle("Notes")
         }
-        .task {
-            do {
-                try await viewModel.fetchNotes()
-            } catch {
-                print("unable to fetch notes \(error)")
-            }
+        .onAppear{
+            viewModel.start()
         }
     }
 
@@ -26,6 +22,6 @@ struct NotesView: View {
 
 struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesView()
+        NotesView(viewModel: .init(apiService: APIPreviewClient()))
     }
 }
