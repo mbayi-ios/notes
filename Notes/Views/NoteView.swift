@@ -1,18 +1,14 @@
 import SwiftUI
 
 struct NoteView: View {
-
-    // MARK: - Properties
-
-    let note: Note
-
-    // MARK: - View
+    let title: String
+    let contents: String
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(note.title)
+            Text(title)
                 .font(.title)
-            Text(note.contents)
+            Text(contents)
                 .font(.body)
         }
     }
@@ -22,11 +18,8 @@ struct NoteView: View {
 struct NoteView_Previews: PreviewProvider {
     static var previews: some View {
         NoteView(
-            note: .init(
-                id: 1,
                 title: "My Note",
                 contents: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            )
         )
     }
 }

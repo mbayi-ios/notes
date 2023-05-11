@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A18B912A0D050F009B28A4 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A18B902A0D050F009B28A4 /* NotesViewModel.swift */; };
 		EF1BBD6928B79D5C00EC653C /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1BBD6828B79D5C00EC653C /* NotesApp.swift */; };
 		EF1BBD6B28B79D5C00EC653C /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1BBD6A28B79D5C00EC653C /* NotesView.swift */; };
 		EF1BBD6D28B79D5D00EC653C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1BBD6C28B79D5D00EC653C /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89A18B902A0D050F009B28A4 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		EF1BBD6528B79D5C00EC653C /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1BBD6828B79D5C00EC653C /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		EF1BBD6A28B79D5C00EC653C /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89A18B8F2A0D04F9009B28A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				89A18B902A0D050F009B28A4 /* NotesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EF1BBD5C28B79D5C00EC653C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		EF1BBD7828B79D8900EC653C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89A18B8F2A0D04F9009B28A4 /* ViewModel */,
 				EF1BBD6A28B79D5C00EC653C /* NotesView.swift */,
 				EF1BBD7C28B79EF000EC653C /* NoteView.swift */,
 			);
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1BBD6B28B79D5C00EC653C /* NotesView.swift in Sources */,
+				89A18B912A0D050F009B28A4 /* NotesViewModel.swift in Sources */,
 				EF1BBD6928B79D5C00EC653C /* NotesApp.swift in Sources */,
 				EF1BBD7D28B79EF000EC653C /* NoteView.swift in Sources */,
 				EF1BBD7B28B79DCC00EC653C /* Note.swift in Sources */,
