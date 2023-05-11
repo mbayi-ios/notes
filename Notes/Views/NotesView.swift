@@ -8,8 +8,8 @@ struct NotesView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.notes) { note in
-                NoteView(title: note.title, contents: note.contents)
+            List(viewModel.noteViewModels) { presentable in
+                NoteView(presentable: presentable)
             }
             .navigationTitle("Notes")
         }
@@ -22,6 +22,10 @@ struct NotesView: View {
 
 struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesView(viewModel: .init(apiService: APIPreviewClient()))
+        NotesView(
+            viewModel: .init(
+                apiService: APIPreviewClient()
+            )
+        )
     }
 }
